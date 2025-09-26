@@ -1,7 +1,6 @@
 # newapp.py
 import streamlit as st
 import pandas as pd
-import bcrypt
 from kb_manager import load_knowledge_base, search_knowledge_base
 from database_manager import (
     get_complaints, save_complaint, get_user,
@@ -302,3 +301,4 @@ if not st.session_state.logged_in and st.session_state.page != "home":
     if st.button("← Back to Home"):
         st.session_state.page = "home"
         st.rerun()
+
